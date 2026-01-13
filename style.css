@@ -17,9 +17,20 @@ body {
     color: white;
     height: 100%;
 }
-h1,h2,h3,h4,h5,h6,p,span{
-    margin: 0;
-    padding: 0;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    box-sizing: content-box;
+}
+
+.h100 {
+    height: 100%;
 }
 
 nav {
@@ -29,9 +40,10 @@ nav {
     height: 3rem;
     padding: 10px;
     box-shadow:
-    rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     background-color: var(--secondary);
+    border-bottom: 2px rgba(0, 0, 0, 0.16) solid;
 }
 
 nav>button {
@@ -50,7 +62,8 @@ nav>button {
         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     }
 }
-.moneyPanel{
+
+.moneyPanel {
     position: absolute;
     bottom: 5px;
     left: 5px;
@@ -58,15 +71,25 @@ nav>button {
     border-radius: 5px;
     padding: 5px;
 }
-#moneyDisplay::after{
+
+#moneyDisplay::after {
     content: ' moners';
 }
 
-#shop{
+#shop {
     background-color: blue;
-    height: 100%;
 }
-#home{
+
+#home {
     background-color: brown;
-    height: 100%;
+}
+
+.shopPets {}
+
+.shopPet {
+    &>img {
+        object-fit: cover;
+        height: 40px;
+        width: 60px;
+    }
 }

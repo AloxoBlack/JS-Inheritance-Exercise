@@ -7,7 +7,8 @@
     <title id="title">Petsy!</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Dog_Paw_Print.png/250px-Dog_Paw_Print.png">
-    <script src="petManagers.js"></script>
+    <script src="script.js"></script>
+    <script src="js/moners.js"></script>
 </head>
 
 <body>
@@ -16,11 +17,22 @@
         <button id="goShop">Shop</button>
     </nav>
     <main id="mainContent">
-        <div id="shop" hidden>
+        <div id="shop" class="h100" hidden>
             <h1>Shop</h1>
+            <div class="petContainers">
+                <div class="shopPet">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Heterochromia_dog%2C_Struga.jpg/250px-Heterochromia_dog%2C_Struga.jpg" alt="">
+                    <h3>Puppy!!!!1!</h3>
+                    <p>A stray dog you encounter and decide to shelter.</p>
+                    <p>+1 moner per second</p>
+                </div>
+            </div>
         </div>
         <div id="home" hidden>
             <h1>Your pets</h1>
+            <div class="ownedPets">
+
+            </div>
         </div>
     </main>
     <div class="moneyPanel">
