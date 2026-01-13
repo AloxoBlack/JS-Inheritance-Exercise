@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", main);
-window.addEventListener("refresh", ()=>alert("refresco"));
+// window.addEventListener("refresh", ()=>alert("refresco"));
 
 const panelTypes = { SHOP: "Shop", HOME: "Home" }
 let panels = [];
@@ -37,9 +37,13 @@ function disablePanels() {
 class moners {
     #amount;
     display;
-    constructor(display, count) {
+    constructor(display) {
         this.display = display;
-        (count == undefined || !Number.isInteger(count)) ? this.#amount = 0 : this.#amount = count;
+        if (localStorage.getItem("moners") != null) {
+            this.#amount = Number(localStorage.getItem("moners"));
+        } else {
+            this.#amount = 0;
+        }
     }
     get() {
         return this.#amount;
@@ -55,5 +59,6 @@ class moners {
 
     updateDisplay() {
         this.display.innerText = this.#amount;
+        localStorage["moners"] = this.#amount;
     }
 }
