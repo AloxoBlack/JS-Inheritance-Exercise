@@ -7,6 +7,7 @@
 :root {
     --primary: rgb(63, 10, 116);
     --secondary: rgb(58, 9, 204);
+    --nav-height: 3rem;
 }
 
 html,
@@ -26,7 +27,7 @@ h5,
 h6,
 p,
 span {
-    box-sizing: content-box;
+    margin: 0;
 }
 
 .h100 {
@@ -37,7 +38,7 @@ nav {
     display: flex;
     align-content: center;
     justify-content: space-around;
-    height: 3rem;
+    height: var(--nav-height);
     padding: 10px;
     box-shadow:
         rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
@@ -64,7 +65,7 @@ nav>button {
 }
 
 .moneyPanel {
-    position: absolute;
+    position: fixed;
     bottom: 5px;
     left: 5px;
     background-color: black;
@@ -78,18 +79,44 @@ nav>button {
 
 #shop {
     background-color: blue;
+    height: fit-content;
 }
 
 #home {
     background-color: brown;
 }
 
-.shopPets {}
+#shopPetContainer,
+#ownedPets {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px;
+}
 
 .shopPet {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30dvw;
+    padding: 10px;
+    
     &>img {
         object-fit: cover;
-        height: 40px;
-        width: 60px;
+        aspect-ratio: 1;
+        border: white 15px outset;
     }
+}
+
+@media (max-width: 750px) {
+    .shopPet {
+        width: 45dvw;
+    }
+}
+
+.shopBuyButton {
+    width: 100%;
+    margin-block-start: 10px;
+    font-size: larger;
 }

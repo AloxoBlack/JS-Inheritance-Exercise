@@ -8,11 +8,13 @@ let wallet;
 function main() {
     panels = document.getElementById("mainContent").childNodes;
     wallet = new moners(moneyDisplay);
+
+    shopManagerInst = new shopManager(shop);
+    shopManagerInst.render();
+
     goShop.onclick = () => togglePanel(panelTypes.SHOP);
     goHome.onclick = () => togglePanel(panelTypes.HOME);
     togglePanel(panelTypes.SHOP);
-
-    window.setInterval(() => wallet.add(1), 1000);
 }
 
 function togglePanel(panel) {

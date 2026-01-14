@@ -9,6 +9,8 @@
     <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Dog_Paw_Print.png/250px-Dog_Paw_Print.png">
     <script src="script.js"></script>
     <script src="js/moners.js"></script>
+    <script src="js/pets.js"></script>
+    <script src="js/shop.js"></script>
 </head>
 
 <body>
@@ -16,21 +18,15 @@
         <button id="goHome">Your Pets</button>
         <button id="goShop">Shop</button>
     </nav>
-    <main id="mainContent">
+    <main id="mainContent" class="h100">
         <div id="shop" class="h100" hidden>
             <h1>Shop</h1>
-            <div class="petContainers">
-                <div class="shopPet">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Heterochromia_dog%2C_Struga.jpg/250px-Heterochromia_dog%2C_Struga.jpg" alt="">
-                    <h3>Puppy!!!!1!</h3>
-                    <p>A stray dog you encounter and decide to shelter.</p>
-                    <p>+1 moner per second</p>
-                </div>
+            <div id="shopPetContainer">
             </div>
         </div>
-        <div id="home" hidden>
+        <div id="home" class="h100" hidden>
             <h1>Your pets</h1>
-            <div class="ownedPets">
+            <div id="ownedPets">
 
             </div>
         </div>
